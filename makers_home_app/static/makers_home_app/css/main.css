@@ -1,0 +1,141 @@
+{% load static %}
+*{
+  /*margin: 0 !important;*/
+  /*padding: 0 !important;*/
+}
+html, body{
+  height: 100%;
+  background: #fafafa;
+	font-family: 'Cuprum', sans-serif;
+	/*background-color:#F0EFF4 !important;*/
+}
+
+
+
+
+
+/*#contain{
+  min-height: 100%
+}
+
+#main{
+  overflow: auto;
+  padding-bottom: 30px;
+}
+*/
+.space_down{
+ min-height: 40vh;
+}
+.progress-bar {
+  background-color: #563D7C;
+}
+
+.content-section {
+  background: #ffffff !important;
+  padding: 10px 20px !important;
+  border: 1px solid #dddddd !important;
+  border-radius: 3px !important;
+  margin-bottom: 20px !important;
+}
+/*body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+*/
+/*#jumboCarousel .carousel-caption {
+    text-align: center;
+	transform: translateY(-50%);
+}*/
+
+.btn-primary {
+    color: #FFFFFF !important;
+    border-color: #563D7C !important;
+    background-color: #563D7C !important;
+
+}
+
+.btn-primary:active {
+    color: #FFFFFF !important;
+    border-color: #563D7C !important;
+    background-color: #563D7C !important;
+    background-color: #563D7C !important;
+}
+
+.btn-primary:hover {
+	color: #563D7C !important;
+    border-color: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+}
+
+#footer{
+  color: #7a7a7a;
+  border-top: 3px solid #563D7C;
+/*  box-shadow: 0 -0.125em 0.25em 0 rgba(0,0,0,0.075);
+*/}
+
+.btn-outline-info{
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+.btn-outline-info:hover {
+  color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    background-color: #563D7C !important;
+}
+
+#jumboCarousel .carousel-caption {
+     /*top: auto;*/
+  /*position: relative;*/
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+#jumboCarousel video {
+    min-height: 300px;
+    min-width: 100%;
+}
+
+#jumboCarousel {
+    min-height: 300px;
+    min-width: 100%;
+}
+
+.navbar{
+	background-color:#563D7C !important;
+}
+.nav_bar_font{
+	font-family: 'Cuprum', sans-serif;
+}
+
+.nav_brand_font{
+	font-family: 'Cuprum', sans-serif;
+}
+
+.title-underline{
+  width: 100%;
+  height:4px;
+  margin: 0 auto;
+  background-color: #563D7C!important;
+}
+.card-header{
+  background-color: #563D7C!important;
+}
+
+
+#welcome_sec{
+    background:linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.9)), url(../img/nikhil-mitra-631990-unsplash.jpg) center/cover no-repeat fixed;
+    color: white!important;
+/*  background-image: url(../img/nikhil-mitra-631990-unsplash.jpg)
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment: fixed;*/
+}
+
+/*font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Cuprum', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Audiowide', cursive;*/

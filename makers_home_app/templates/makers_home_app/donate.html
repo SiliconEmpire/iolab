@@ -1,0 +1,33 @@
+{% extends "makers_home_app/base.html" %}
+{% load static %}
+{% block content %}
+    <h2>Donate Cash, Tools or Time!</h2>
+    <div class=" title-underline bg-danger">
+
+    </div>
+    <div class="border-top pt-3">
+        
+    </div>
+
+    <div class="row">
+    	<div class=" col-sm-6 col-md-4 my-3">
+			<img src="{%static 'makers_home_app/img/naira.jpg'%}" class="img-fluid rounded" alt="project">
+		</div>
+		<div class=" col-sm-6 col-md-4 my-3">
+			<img src="{%static 'makers_home_app/img/Tools-4-Life-1.png'%}" class="img-fluid rounded" alt="project">
+		</div>
+		<div class=" col-sm-12 col-md-4 my-3">
+			<img src="{%static 'makers_home_app/img/Time.jpg'%}" class="img-fluid rounded" alt="project">
+		</div>
+    </div>
+    
+
+    <div class="row">
+    	<div class="col-sm-12 col-lg-6">
+    <p>
+    	At IOLAB Makerspace, we take donations in many forms. We can always use extra money to fund the programs that benefit our surrounding communities. We are also in search of quality tools that our members can use to build the next big thing. Not only shop tools, but computers and electronics, too. If you have extra time on your hands we will take that, too. <a href="{% url 'contact'%}"> Contact </a> us and become a volunteer to help with events or workshops.
+    </p>  
+     </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,125 @@
+{% extends "makers_home_app/base.html" %}
+{% load static %}
+{% block content %}
+    <h2 class="display-4 text-center">Become a member of the IOLAB Today!</h2>
+    <p class="text-center text-muted">By joining us, you will become one of the backbones of IOLAB! Without you, there would not be an us</p>
+    <div class=" title-underline bg-danger">
+
+	</div>
+    <div class="border-top pt-3">
+        
+    </div>
+
+
+    <div class="">
+    	<h4 class="">How to become a member</h4>
+
+    	<p>Becoming a member of IOLAB Makerspace costs only 7000 Naira per week. Just select the “Weekly Membership” from the Pricing cards below. You will then be redirected to a page
+    	with payment detail for weekly subscription</p>
+
+    	<p>Monthly membership is available at a price rate of 30,000 Naira. That’s a whole month of access to our makerspace and tools!  Just select the “Monthly Membership Plan” from the Pricing cards below. You will then be redirected to a page with payment detail for monthly subscription</p>
+
+    	<p>Annual memberships are available at a discount rate of 335,000 Naira. That’s one whole month free! Just select the “Annual Membership Plan” from the Pricing Cards below. You will then be redirected to a page with payment detail for Annual subscription</p>
+
+    	<p>Once we have received your first payment, <a href="">signed membership agreement</a>, <a href="">signed liability waiver</a> and <a href="">emergency contact information</a>, we will arrange a time to meet with you to give you access to the space.</p>
+
+
+
+    {% if user.usermembership.active%}
+
+
+    	<div class=" my-5 py-5 alert alert-info">
+    		<p>
+	    		Hi {{user.username}}, you are currently on {{user.usermembership.subscription_type}}
+	    		Plan, therefore you do not have access to the pricing cards until you exhaust your current subscription
+	    	</p>
+    	</div>
+
+
+    {% else %}
+ 
+    <div class="card-deck py-5">
+
+
+	  <div class="card my-4">
+	  	<div class="card-header bg-primary text-white text-uppercase text-center py-4">
+			<h3 class="">weekly 7k</h3>
+		</div>
+	    <img class="card-img-top" src="{%static 'makers_home_app/img/images.jpg'%}" alt="Card image cap">
+	    <div class="card-body">
+	      <h5 class="card-title">What do I get With My Weekly Membership Plan?</h5>
+	      <ul class="list-group list-group-flush text-center">
+			<li class=" list-group-item">
+				7Days access to our makerspace, tools and equipment to use at the IOLAB Makerspace facility
+			</li>
+			<li class=" list-group-item">
+				Training on tools and equipment requiring special instruction
+			</li>
+			<li class=" list-group-item">
+				Inclusion or discounts in some classes and workshops normally requiring a fee
+			</li>
+		</ul>
+	    </div>
+	     <div class="card-footer">
+			<a href="{% url 'weekly' %}" class="btn btn-block btn-primary text-capitalize">subscribe</a>
+		</div>
+	  </div>
+
+
+	  <div class="card my-4">
+	  	<div class="card-header bg-primary text-white text-uppercase text-center py-4">
+			<h3 class="">monthly 30k</h3>
+		</div>
+	    <img class="card-img-top" src="{%static 'makers_home_app/img/mdx540specsmobile.jpg'%}" alt="Card image cap">
+	    <div class="card-body">
+	      <h5 class="card-title">What do I get With My Monthly Membership Plan?</h5>
+	      <ul class="list-group list-group-flush text-center">
+			<li class=" list-group-item">
+				30 Days access to our makerspace, tools and equipment to use at the IOLAB Makerspace facility
+			</li>
+			<li class=" list-group-item">
+				Training on tools and equipment requiring special instruction
+			</li>
+			<li class=" list-group-item">
+				Inclusion or discounts in some classes and workshops normally requiring a fee
+			</li>
+		</ul>
+	    </div>
+	    <div class="card-footer">
+			<a href="{% url 'monthly' %}" class="btn btn-block btn-primary text-capitalize">subscribe</a>
+		</div>
+	  </div>
+
+
+	  <div class="card my-4">
+	  	<div class="card-header bg-primary text-white text-uppercase text-center py-4">
+			<h3 class="">annual 335k</h3>
+		</div>
+	    <img class="card-img-top" src="{%static 'makers_home_app/img/DIY-KIT-1.jpg'%}" alt="Card image cap">
+	    <div class="card-body">
+	     <h5 class="card-title">What do I get With My Annual Membership Plan?</h5>
+	      <ul class="list-group list-group-flush text-center">
+			<li class=" list-group-item">
+				365 Days access to our makerspace, tools and equipment to use at the IOLAB Makerspace facility
+			</li>
+			<li class=" list-group-item">
+				Training on tools and equipment requiring special instruction
+			</li>
+			<li class=" list-group-item">
+				Inclusion or discounts in some classes and workshops normally requiring a fee
+			</li>
+			<li class=" list-group-item">
+				One month free
+			</li>
+		</ul>
+	    </div>
+	    <div class="card-footer">
+			<a href="{% url 'annual' %}" class="btn btn-block btn-primary text-capitalize">subscribe</a>
+		</div>
+	  </div>
+	  {% endif %}
+
+
+	</div>
+	</div>
+{% endblock content %}

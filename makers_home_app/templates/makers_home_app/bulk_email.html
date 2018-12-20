@@ -1,0 +1,18 @@
+{% extends "makers_home_app/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block form_content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Send A Bulk Email TO ALL IOLAB Members</legend>
+                {{ B_Email_F|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+{% endblock form_content %}

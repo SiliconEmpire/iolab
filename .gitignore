@@ -1,0 +1,6 @@
+*pyc
+db.sqlite3
+/docs
+/static
+/iolab_makerspace/old_settings.py
+/iolab_makerspace/settings/base.py

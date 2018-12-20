@@ -1,0 +1,208 @@
+{% extends 'makers_home_app/base.html' %}
+{% load static %}
+
+{% block home_content %}
+	 <!--xxxxxxxxxxxxxxxxxxxxx     Header Section    xxxxxxxxxxxxxxxxxxxx-->
+
+                    <div id="jumboCarousel" class="carousel height mb-5" data-ride="carousel">
+                        <div class="carousel-inner ">
+                          <div class="carousel-item active">
+                          	<a href="">
+                            <video class="d-block w-100" preload="true" autoplay="autoplay" loop="loop" muted poster="{%static 'makers_home_app/img/laserweb-on-cheap-laser-square-3.jpg'%}">
+                              <source src="{%static 'makers_home_app/video/cnc_header_video.mp4'%}" type="video/mp4">
+                                <source src="{%static 'makers_home_app/video/cnc_header_video.webm'%}" type="video/webm">
+                                  <source src=".ogv" type="video/ogg">
+                            </video>
+                            </a>
+                            <div class="carousel-caption ">
+                            	<div class="d-none d-md-block mb-5 ">
+							   <h1 class="text-uppercase display-1"><strong>IOLAB</strong></h1>
+							   <p class="lead py-2 display-4 ">inspiring innovation and creativity through technology, discipline and community</p>
+							   </div>
+							   <div class="mb-5 ">
+							   <a href="{% url 'about' %}" class="btn btn btn-primary btn-lg m-2 text-capitalize" >
+							   		about us
+								</a>
+								<a href="{% url 'membership' %}" class="btn btn-primary btn-lg m-2 text-capitalize">
+									become a member
+								</a>
+								</div>
+							 </div>
+                          </div>
+                        </div>
+                      </div>
+<!--xxxxxxxxxxxxxxxxxxxxx    End Of Header Section    xxxxxxxxxxxxxxxxxxxx-->
+
+
+
+
+<!--xxxxxxxxxxxxxxxxxxxxx    Mission Section    xxxxxxxxxxxxxxxxxxxx-->
+<section id="mission_sec" class = "py-5">
+  <div class="container">
+
+    <!-- tittle -->
+      <div class="row ">
+        <div class="col text-center">
+          <h1 class="display-4 text-uppercase text-dark mb-0">
+            <strong>our mission</strong>
+          </h1>
+          <div class=" title-underline bg-danger">
+
+          </div>
+          <p class="mt-2 text-capitalize text-muted">Design it and and build it here in nigeria.</p>
+        </div>
+      </div>
+      <!-- end of tittle -->
+
+      <div class="row">
+        <!-- single col --> 
+        <div class=" col-md-6 col-lg-3 text-center my-4">
+          <i style="color: #563D7C!important;" class="fas fa-wrench fa-5x text-danger"></i>
+          <h3 class="text-uppercase my-3">Create</h3>
+          <p class="text-muted">Hardware and software enthusiasts are encouraged to
+            connect with us. Get out of your garage and come on over.
+          </p>
+          <!-- <a href="" class="btn btn-outline-danger btn-block text-uppercase">press here</a> -->
+        </div>
+        <!-- end of single col -->
+        <!-- single col -->
+        <div class=" col-md-6 col-lg-3 text-center my-4">
+          <i style="color: #563D7C!important;" class="fab fa-hackerrank fa-5x text-danger"></i>
+          <h3 class="text-uppercase my-3">Hack</h3>
+          <p class="text-muted">Want to build something to save the world or solve a problem?
+            Awesome, we have a makerspace and a pretty fast internet.
+          </p>
+<!--           <a href="" class="btn btn-outline-danger btn-block text-uppercase">press here</a>
+ -->        </div>
+        <!-- end of single col -->
+        <!-- single col -->
+        <div class=" col-md-6 col-lg-3 text-center my-4">
+          <i style="color: #563D7C!important;" class=" fas fa-handshake fa-5x text-danger"></i>
+          <h3 class="text-uppercase my-3">Connect</h3>
+          <p class="text-muted">Get to know our community of hackers, entrepreneurs,
+            artists, makers, innovators, designers and Scientists.
+          </p>
+<!--           <a href="" class="btn btn-outline-danger w-50 text-uppercase">press here</a>
+ -->        </div>
+        <!-- end of single col -->
+        <!-- single col -->
+        <div class=" col-md-6 col-lg-3 text-center my-4">
+          <i style="color: #563D7C!important;"  class="fab fa-leanpub fa-5x "></i>
+          <h3 class="text-uppercase my-3">Learn</h3>
+          <p class="text-muted">
+            Collaborate to pick up new Skills, brainstorm ideas,
+            or find help from someone in our community to debug an issue.
+          </p>
+<!--           <a href="" class="btn btn-outline-danger w-25 text-uppercase">press here</a>
+ -->        </div>
+        <!-- end of single col -->
+
+      </div>
+  </div>
+</section>
+<!--xxxxxxxxxxxxxxxxxxxxx    End of Mission Section    xxxxxxxxxxxxxxxxxxxx-->
+
+
+
+
+<!--xxxxxxxxxxxxxxxxxxxxx    Welcome Section    xxxxxxxxxxxxxxxxxxxx-->
+<section id = "welcome_sec" class="p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-uppercase">You Make, therefore <br> you Rule</h1>
+        <p class="">
+          Making isn't just about replicating what's already happened, it's
+          about generating whatever's next. This is where IOLAB makerspace meets the road to progress.
+        </p>
+        <p class="">
+         
+        </p>
+      </div>
+      <div class="col-md-6 ">
+        <h1>Make Everything</h1>
+        <p class="">
+          Wherever making leads you, you'll need access to tools you can trust.<br>
+          Tools that 3D print bigger and faster,<br>
+          CNC Milling machings that give you a precise milling and good finishing,<br>
+          CNC Laser Cutters that aids your precise and accurate cutting<br>
+          <h4>IOLAB Got Your Back !!!</h4>
+          
+        </p>
+        <a href="{% url 'membership' %}" class=" btn btn-outline-info btn-block text-capitalize " >
+                    Start your journey with us today
+                </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--xxxxxxxxxxxxxxxxxxxxx   End of Welcome Section    xxxxxxxxxxxxxxxxxxxx-->
+
+
+
+
+
+
+
+
+
+  <!-- contact section -->
+  <section id="contact" class="py-5 ">
+    <div class="container">
+      <!-- section-tittle -->
+      <div class="row ">
+        <div class="col text-center">
+          <h1 class="display-4 text-uppercase text-dark mb-0">
+            <strong>find us</strong>
+          </h1>
+          <div class=" title-underline bg-primary">
+
+          </div>
+          <p class="mt-2 text-capitalize text-muted">Use our <a href="{% url 'contact' %}">contact</a> contact page to get in touch</p>
+        </div>
+      </div>
+      <!-- end of section-tittle -->
+
+      <div class="row">
+        <!-- google maps -->
+        <div class="col-md-6 my-3">
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.469710128549!2d3.3596904142667796!3d6.5883888242346496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b926a7f4ccd31%3A0xdcca12f9f0650bc7!2s62b+Opebi+Rd%2C+Opebi+100281%2C+Ikeja!5e0!3m2!1sen!2sng!4v1542456051593" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 my-3 d-flex justify-content-center ">
+          <div class="">
+           
+            <p>
+              Our workshop is located at: <br>
+              62A Opebi Road, <br>
+              Ikeja Lagos State
+            </p>
+
+            <p>
+              Email: <a href="">info@iolab.com.ng</a> 
+            </p>
+
+            <p>
+              Call us at: +2348132450841.
+            </p>
+
+            <p>
+              Visiting Hours:<br>
+              8am - 5pm 6 days a week
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end of contact section -->
+
+
+
+{% endblock home_content %}

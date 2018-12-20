@@ -1,0 +1,85 @@
+{% extends "makers_home_app/base.html" %}
+{% block home_content %}
+	<!-- 
+		i put this in the block home_content bcuz i want it to ocuppy the full width and
+		avoiding the grid system in the block content defined in base.html 
+	 -->
+	<div class="jumbotron pt-0 pb-3 ">
+		<div class="container-fluid ">
+	  <h1 class="display-2 text-center ">Hello, {{user.username}}!</h1>
+
+	  <div class=" title-underline bg-danger mb-5">
+
+	</div>
+
+	  <!-- <hr class="my-4"> -->
+
+	  	<p class="text-muted ">
+	  		Note that your phone number( <a href="">{{user.usermembership.phone_number}}</a> ) and email ( <a href="">{{user.email}}</a> ) serves as your identity in our data base and is important that they are valid, if they are not click the botton bellow to update them
+	  	</p>
+	  <a class="btn btn-primary btn-lg ml-auto" href="{% url 'makers_dashboard_update' %}" role="button">
+	  	Update
+	  </a>
+	  </div>
+	</div>
+{% endblock home_content %}
+{% block content %}
+	<div class="content-section my-5">
+		{%if activated%}
+			<div class="alert alert-info" role="alert">
+			  <h4 class="display-4">Good {{user.username}}!</h4>
+			  <p>You are currently subscribed to our {{sub_type}} plan, your subscription details are stated bellow </p>
+			  <hr>
+			  <h4 class="alert-heading">Subscription Date <i style="color: #563D7C!important;" class="fas fa-minus fa-1x text-danger"></i> <small>{{sub_date|date:"F d, Y"}}</small></h4>
+			  <h4 class="alert-heading">Expiry Date <i style="color: #563D7C!important;" class="fas fa-minus fa-1x text-danger"></i> <small>{{expiry_date|date:"F d, Y"}} </h4>
+			  <h4 class="alert-heading">Days Remaining <i style="color: #563D7C!important;" class="fas fa-minus fa-1x text-danger"></i> <small>{{d_remaining}}</h4>
+			</div>
+			
+		{% else %}
+
+			<div class="alert alert-info" role="alert">
+			  <h4 class="display-4">Aww {{user.username}}!</h4>
+			  <p>You are currently not subscribed to any of our plan, so u currently do not have access to the makerspace, click the button bellow to subscribe </p>
+			  <hr>
+			  <a class="btn btn-primary btn-lg ml-auto" href="{% url 'membership' %}" role="button">
+				 Subscribe
+				</a>
+			</div>
+
+		{% endif %}
+		
+		<div class="progress" style="height: 1px;">
+		  <div class="progress-bar" role="progressbar" style="width: {{percentage}}%;" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+
+		<div class="progress my-2" style="height: 30px;">
+		  <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%">{{d_remaining}} {%if activated%}remaining{% endif %}</div>
+		</div>
+
+		<div class="progress" style="height: 1px;">
+		  <div class="progress-bar" role="progressbar" style="width: {{percentage}}%;" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+	</div>
+
+	{% if user.is_superuser %}
+	<div class="alert alert-danger">
+		<p>This section is strictly for admin users only, if you are not an admin and you are seeing this report through our contact page</p>
+		<a class="btn btn-primary ml-auto" href="{% url 'makers_activator' %}" role="button">
+	  		ACTIVATE A USER
+		 </a>
+		 <a class="btn btn-primary ml-auto" href="{% url 'bulk_email' %}" role="button">
+		  	SEND BULK EMAIL
+		 </a>
+	</div>
+	{% endif %}
+{% endblock content %}
+
+
+<!-- 	'sub_date':sub_date,
+		'expiry_date':expiry_date,
+		'sub_type':sub_type,
+		'sub_duration':sub_duration,
+		'd_remaining':d_remaining,
+		'p_number':p_number,
+		'activated':activated, 
+		-->

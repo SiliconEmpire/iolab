@@ -1,0 +1,64 @@
+{% extends "makers_home_app/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row">
+    <div class="col-8 ">
+        <h3>Contact US!</h3>
+        <div class=" title-underline bg-danger">
+
+          </div>
+            <p>
+             You can make inquiries, comment, ask questions or even book a tour of the makerspace. Just contact us
+              by filling the contact form bellow, or via our phone numbers and email, our team members will be willing and happy to help you out.
+            </p>
+            <p>
+              All messages will be responded to within 24 hours.
+            </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+         <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">SEND US A MESSAGE</legend>
+                {{ Member_Contact_F|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <div class="col-sm-6 d-flex justify-content-center ">
+       <div class="">
+           
+            <p>
+              Our workshop is located at: <br>
+              62A Opebi Road, <br>
+              Ikeja Lagos State
+            </p>
+
+            <p>
+              Email: <a href="">info@iolab.com.ng</a> 
+            </p>
+
+            <p>
+              Call us at: <br>
+               +2348132450841.<br>
+               +23480********
+            </p>
+
+            <p>
+              Visiting Hours:<br>
+              8am - 5pm 6 days a week
+            </p>
+
+
+          </div>
+    </div>
+</div>
+   
+{% endblock content %}
